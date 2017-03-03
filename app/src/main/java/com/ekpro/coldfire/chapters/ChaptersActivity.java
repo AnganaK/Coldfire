@@ -1,6 +1,7 @@
 package com.ekpro.coldfire.chapters;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
@@ -77,26 +78,31 @@ public class ChaptersActivity extends AbstractFragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        toolbar.setBackgroundColor(getResources().getColor(R.color.lightGreen500));
+//        toolbar.setVisibility(View.GONE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 //        boolean isNotification = false;
 //        boolean isDiagnose = false;
 //        boolean isFromDiagnosisReport = false;
 
         chapters = new ArrayList<>();
 
-        chapters.add("chapter 1");
-        chapters.add("chapter 2");
-        chapters.add("chapter 3");
-        chapters.add("chapter 4");
-        chapters.add("chapter 5");
-        chapters.add("chapter 6");
-        chapters.add("chapter 7");
-        chapters.add("chapter 8");
-        chapters.add("chapter 9");
-        chapters.add("chapter 10");
-        chapters.add("chapter 11");
-        chapters.add("chapter 12");
-        chapters.add("chapter 13");
-        chapters.add("chapter 14");
+        chapters.add("Past Classes");
+        chapters.add("Current Classes");
+        chapters.add("Future Planning");
+//        chapters.add("chapter 4");
+//        chapters.add("chapter 5");
+//        chapters.add("chapter 6");
+//        chapters.add("chapter 7");
+//        chapters.add("chapter 8");
+//        chapters.add("chapter 9");
+//        chapters.add("chapter 10");
+//        chapters.add("chapter 11");
+//        chapters.add("chapter 12");
+//        chapters.add("chapter 13");
+//        chapters.add("chapter 14");
 
 
         isAutomatic = false; // did hard code false for manually diagnose & true for automatic

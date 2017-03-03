@@ -5,6 +5,7 @@ import com.ekpro.coldfire.models.LoginParams;
 import com.ekpro.coldfire.models.StudentDetails;
 
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -30,8 +31,11 @@ public interface ApiService {
     @POST("TempStudent/login")
     Call<ApiResponse<StudentDetails>> requestTempStudentLogin(@Body LoginParams params);
 
-    @GET("Students/department")
+    @GET("Student/getDepartment")
     Call<ApiResponse<DepartmentParams>> requestDepartment();
+
+    @POST("Student/getInterest")
+    Call<ApiResponse<InterestParams>> requestInterest(@Body HashMap<String, String> params);
 
 }
 

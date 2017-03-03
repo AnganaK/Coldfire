@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 public class DepartmentParams {
 
-    private ArrayList<String> departments;
+    private ArrayList<String> department;
 
     public ArrayList<String> getDepartments() {
-        return departments;
+        return department;
     }
 
     public void setDepartments(ArrayList<String> departments) {
-        this.departments = departments;
+        this.department = departments;
     }
 }

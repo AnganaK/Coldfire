@@ -40,6 +40,9 @@
     <string name="tags">Additional Interest Tags</string>
     <string name="years">Years Remaining in Program</string>
 
+    <string name="servererror">Server Unavailable.</string>
+
+    <!--
     <string-array name="department_array">
         <item>Malaysia</item>
         <item>United States</item>
@@ -50,4 +53,5 @@
         <item>New Zealand</item>
         <item>India</item>
     </string-array>
+    -->
 </resources>
