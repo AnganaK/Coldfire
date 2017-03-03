@@ -176,7 +176,7 @@ public class ChaptersActivity extends AbstractFragmentActivity {
         toolbarHome.setTitle("Your Progress");
         toolbarHome.setNavigationIcon(R.drawable.menu_purple);
         tvActivityTitle.setText("Your Progress");
-        setSupportActionBar(toolbarHome);
+//        setSupportActionBar(toolbarHome);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

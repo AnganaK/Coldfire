@@ -26,7 +26,7 @@ public interface ApiService {
 //    @POST("/TempConsumer/initialize")
 //    void createTempConsumer(@Body TempConsumer tempConsumer, Callback<ServifyResponse<TempConsumer>> tempConsumerCallback);
 
-    @POST("/TempStudent/login/")
+    @POST("TempStudent/login")
     Call<ApiResponse<StudentDetails>> requestTempStudentLogin(@Body LoginParams params);
 
 }
