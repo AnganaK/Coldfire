@@ -1,4 +1,4 @@
-package com.incredible.computerstudies.Utils;
+package com.ekpro.coldfire.Utils;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;

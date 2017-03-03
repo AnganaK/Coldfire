@@ -1,11 +1,12 @@
-package com.incredible.computerstudies;
+package com.ekpro.coldfire;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.incredible.computerstudies.Utils.AbstractBaseActivity;
+import com.ekpro.coldfire.Utils.AbstractBaseActivity;
 
 public class SplashScreenActivity extends AbstractBaseActivity {
 
@@ -15,7 +16,7 @@ public class SplashScreenActivity extends AbstractBaseActivity {
         setContentView(R.layout.activity_splash_screen);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            this.getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+            this.getWindow().setStatusBarColor(Color.WHITE);
         }
 
 

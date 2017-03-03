@@ -1,4 +1,4 @@
-package com.incredible.computerstudies.webservices;
+package com.ekpro.coldfire.webservices;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

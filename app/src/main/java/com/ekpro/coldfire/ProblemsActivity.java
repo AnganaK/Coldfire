@@ -1,4 +1,4 @@
-package com.incredible.computerstudies;
+package com.ekpro.coldfire;
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,8 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.incredible.computerstudies.Utils.AbstractBaseActivity;
-import com.incredible.computerstudies.chapters.ChaptersActivity;
+import com.ekpro.coldfire.Utils.AbstractBaseActivity;
+import com.ekpro.coldfire.chapters.ChaptersActivity;
 
 import java.util.ArrayList;
 

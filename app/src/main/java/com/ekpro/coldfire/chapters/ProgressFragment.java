@@ -1,4 +1,4 @@
-package com.incredible.computerstudies.chapters;
+package com.ekpro.coldfire.chapters;
 
 import android.content.Intent;
 import android.os.Build;
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.incredible.computerstudies.AppConstant;
-import com.incredible.computerstudies.ProblemsActivity;
-import com.incredible.computerstudies.R;
-import com.incredible.computerstudies.Utils.AbstractBaseFragment;
+import com.ekpro.coldfire.AppConstant;
+import com.ekpro.coldfire.ProblemsActivity;
+import com.ekpro.coldfire.R;
+import com.ekpro.coldfire.Utils.AbstractBaseFragment;
 
 import java.util.ArrayList;
 

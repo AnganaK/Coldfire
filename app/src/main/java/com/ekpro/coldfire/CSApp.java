@@ -1,4 +1,4 @@
-package com.incredible.computerstudies;
+package com.ekpro.coldfire;
 
 import android.app.Application;
 

@@ -1,4 +1,4 @@
-package com.incredible.computerstudies;
+package com.ekpro.coldfire;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.incredible.computerstudies.Utils.AbstractBaseActivity;
-import com.incredible.computerstudies.chapters.ChaptersActivity;
+import com.ekpro.coldfire.Utils.AbstractBaseActivity;
+import com.ekpro.coldfire.chapters.ChaptersActivity;
 
 import butterknife.Bind;
 import butterknife.OnClick;

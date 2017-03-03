@@ -1,6 +1,6 @@
-package com.incredible.computerstudies.webservices;
+package com.ekpro.coldfire.webservices;
 
-import com.incredible.computerstudies.models.StudentDetails;
+import com.ekpro.coldfire.models.StudentDetails;
 
 import java.util.HashMap;
 

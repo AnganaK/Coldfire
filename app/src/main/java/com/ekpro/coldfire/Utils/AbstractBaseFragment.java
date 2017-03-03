@@ -1,4 +1,4 @@
-package com.incredible.computerstudies.Utils;
+package com.ekpro.coldfire.Utils;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -14,9 +14,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.incredible.computerstudies.R;
-import com.incredible.computerstudies.webservices.ApiService;
-import com.incredible.computerstudies.webservices.RestClient;
+import com.ekpro.coldfire.R;
+import com.ekpro.coldfire.webservices.ApiService;
+import com.ekpro.coldfire.webservices.RestClient;
 
 import java.util.Date;
 

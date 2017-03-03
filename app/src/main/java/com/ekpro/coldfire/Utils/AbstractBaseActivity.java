@@ -1,4 +1,4 @@
-package com.incredible.computerstudies.Utils;
+package com.ekpro.coldfire.Utils;
 
 
 import android.app.Dialog;
@@ -15,9 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.incredible.computerstudies.R;
-import com.incredible.computerstudies.webservices.ApiService;
-import com.incredible.computerstudies.webservices.RestClient;
+import com.ekpro.coldfire.R;
+import com.ekpro.coldfire.webservices.ApiService;
+import com.ekpro.coldfire.webservices.RestClient;
 
 import java.util.Date;
 
@@ -31,20 +31,9 @@ public class AbstractBaseActivity extends AppCompatActivity {
     protected ApiService service;
     protected Gson gson;
     public Dialog dialogConfirmation;
-//    public Servify servify = Servify.getSharedInstance();
     private Dialog loadingDialog;
 
     /*Keen Project Data*/
-    public static final String CONSUMER_PROJECT_ID = "56fb85cd672e6c02b90521b4";
-    public static final String CONSUMER_WRITE_KEY = "74b0855b69a35b2f37f6c78b3effda08f606263fbd363977c3019a32455d649cd157c3bef3ba78f3309a2b02613643791b67abad51c8bb52104656b3ae9f05622c6b604d8540a9d024878d12cacc3900111de55de3f3e01ecdc59a9e88aad0be";
-    public static final String CONSUMER_READ_KEY = "75401ff7046044acf44e8f0de30379b24e1e250988e139c92ec123eb0963f38c5ed5ee3fce28caf436c41ef9a506abe9a85abc26e60079289777b8f5eb3d53ad18f6af3988a32d0fbc7dc75ff3bf50fc94961c45717d2b3ff570c094e6a34823";
-//    public static final KeenProject consumerProject = new KeenProject(CONSUMER_PROJECT_ID, CONSUMER_WRITE_KEY, CONSUMER_READ_KEY);
-    private long seconds;
-    public Date startRead, stopRead;
-    public int difference;
-//    public Consumer consumer;
-
-//    public AppPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +48,6 @@ public class AbstractBaseActivity extends AppCompatActivity {
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
-
-
         ButterKnife.bind(this);
     }
 
@@ -68,13 +55,13 @@ public class AbstractBaseActivity extends AppCompatActivity {
         @Override
         protected void onResume() {
             super.onResume();
-            startRead = new Date();
-            showNetworkDialog();
+//            startRead = new Date();
+//            showNetworkDialog();
         }
 
-        @Override
-        protected void attachBaseContext(Context newBase) {
-        }
+//        @Override
+//        protected void attachBaseContext(Context newBase) {
+//        }
 
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
@@ -90,14 +77,13 @@ public class AbstractBaseActivity extends AppCompatActivity {
         protected void onPause() {
             super.onPause();
 
-            if (!isFinishing()) {
-                dismissLoadingDialog();
-
-//        dismissLoadingDialog();
-                if (dialogConfirmation != null && dialogConfirmation.isShowing()) {
-                    dialogConfirmation.dismiss();
-                }
-            }
+//            if (!isFinishing()) {
+//                dismissLoadingDialog();
+//
+//                if (dialogConfirmation != null && dialogConfirmation.isShowing()) {
+//                    dialogConfirmation.dismiss();
+//                }
+//            }
         }
 
         public boolean isNetworkOnline() {
@@ -127,10 +113,9 @@ public class AbstractBaseActivity extends AppCompatActivity {
         }
 
         private void showNetworkDialog() {
-//            if (!isNetworkOnline()) {
-//
-//                setNetworkDialog();
-//            }
+            if (!isNetworkOnline()) {
+                setNetworkDialog();
+            }
         }
 
         public boolean isGpsEnabled() {

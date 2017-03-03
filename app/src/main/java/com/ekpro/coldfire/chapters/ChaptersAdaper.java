@@ -1,4 +1,4 @@
-package com.incredible.computerstudies.chapters;
+package com.ekpro.coldfire.chapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.incredible.computerstudies.R;
+import com.ekpro.coldfire.R;
 
 import java.util.ArrayList;
 

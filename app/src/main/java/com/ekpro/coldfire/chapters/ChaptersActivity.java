@@ -1,4 +1,4 @@
-package com.incredible.computerstudies.chapters;
+package com.ekpro.coldfire.chapters;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -23,9 +23,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.incredible.computerstudies.AppConstant;
-import com.incredible.computerstudies.R;
-import com.incredible.computerstudies.Utils.AbstractFragmentActivity;
+import com.ekpro.coldfire.AppConstant;
+import com.ekpro.coldfire.R;
+import com.ekpro.coldfire.Utils.AbstractFragmentActivity;
 
 import java.util.ArrayList;
 
