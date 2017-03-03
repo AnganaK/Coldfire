@@ -19,13 +19,29 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/imageView2" />
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/hofstra_logo"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:gravity="center"
         android:text="@string/Hofstra"
-        android:textSize="15sp"
-        android:id="@+id/textView2"/>
+        android:textSize="24sp"
+        android:id="@+id/textView2"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:layout_below="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
 
 </RelativeLayout>
