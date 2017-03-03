@@ -141,7 +141,10 @@ public class ChaptersActivity extends AbstractFragmentActivity {
 
     private void setFragmentManager() {
         fragmentManager = this.getSupportFragmentManager();
+
     }
+
+
 
 
     private void setUpBottomSheetContent() {
@@ -389,6 +392,19 @@ public class ChaptersActivity extends AbstractFragmentActivity {
 //        drawerLayout.closeDrawer(Gravity.LEFT);
 //        Utilities.instance.shortSnack(rlHomeActivity, "Payments");
 //    }
+
+    @OnClick(R.id.tvCurrentClass)
+    public void changeClass() {
+        f = this.getSupportFragmentManager().findFragmentById(R.id.flHomeContainer);
+        if (f instanceof ProgressFragment) {
+            // can do something with f
+            drawerLayout.closeDrawer(Gravity.LEFT);
+        } else {
+            replaceFragment(ProgressFragment.newInstance());
+            tvActivityTitle.setText("YOUR PROGRESS");
+            drawerLayout.closeDrawer(Gravity.LEFT);
+        }
+    }
 
     @OnClick(R.id.rlProgress)
     public void navMyProgress() {

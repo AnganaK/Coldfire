@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 public class InterestParams {
 
-    private ArrayList<Course_Name> interest;
+    private ArrayList<String> interest;
 
-    public ArrayList<Course_Name> getInterest() {
+    public ArrayList<String> getInterest() {
         return interest;
     }
 
-    public void setInterest(ArrayList<Course_Name> interest) {
+    public void setInterest(ArrayList<String> interest) {
         this.interest = interest;
     }
 }

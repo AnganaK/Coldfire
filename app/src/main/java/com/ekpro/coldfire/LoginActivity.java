@@ -32,6 +32,8 @@ import retrofit2.Callback;
 
 public class LoginActivity extends AbstractBaseActivity {
 
+    int username;
+
     @Bind(R.id.etUsername)
     EditText etUsername;
 
@@ -63,6 +65,7 @@ public class LoginActivity extends AbstractBaseActivity {
 
 
         LoginParams theseParams = new LoginParams();
+        username = Integer.parseInt(etUsername.getText().toString());
 
         theseParams.setUsername(Integer.parseInt(etUsername.getText().toString()));
         theseParams.setPassword(etPassword.getText().toString());
@@ -112,8 +115,12 @@ Log.d("entered here", "value");
                                 startActivity(new Intent(LoginActivity.this, ChaptersActivity.class));
                                 finish();
                             } else{
+                                Intent intent = new Intent(LoginActivity.this, FirstTime.class);
+                                intent.putExtra("username", username);
+                                startActivity(intent);
 
-                                startActivity(new Intent(LoginActivity.this, FirstTime.class));
+//                                startActivity(new Intent(LoginActivity.this, FirstTime.class));
+
                                 finish();
                             }
 

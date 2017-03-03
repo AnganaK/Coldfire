@@ -37,5 +37,8 @@ public interface ApiService {
     @POST("Student/getInterest")
     Call<ApiResponse<InterestParams>> requestInterest(@Body HashMap<String, String> params);
 
+    @POST("User/updateInterest")
+    Call<ApiResponse<StatusParam>> requestSendData(@Body FirstTimeDataParams params);
+
 }
 

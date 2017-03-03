@@ -24,8 +24,10 @@ import com.ekpro.coldfire.Utils.AbstractBaseActivity;
 import com.ekpro.coldfire.chapters.ChaptersActivity;
 import com.ekpro.coldfire.webservices.ApiResponse;
 import com.ekpro.coldfire.webservices.DepartmentParams;
+import com.ekpro.coldfire.webservices.FirstTimeDataParams;
 import com.ekpro.coldfire.webservices.InterestParams;
 import com.ekpro.coldfire.webservices.RestClient;
+import com.ekpro.coldfire.webservices.StatusParam;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,6 +49,10 @@ public class FirstTime extends AbstractBaseActivity implements AdapterView.OnIte
 
     private int yearsRemaining;
     private String interestTags;
+    private String depar;
+    private ArrayList inte;
+
+    int user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +61,8 @@ public class FirstTime extends AbstractBaseActivity implements AdapterView.OnIte
 
         setContentView(R.layout.activity_first_time);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        user = getIntent().getIntExtra("username", 0);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setBackgroundColor(getResources().getColor(R.color.lightGreen500));
@@ -137,6 +145,7 @@ public class FirstTime extends AbstractBaseActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view,
                                int pos, long id) {
         requestInterest(depart.getDepartments().get(pos));
+        depar = depart.getDepartments().get(pos);
     }
 
 
@@ -209,7 +218,7 @@ public class FirstTime extends AbstractBaseActivity implements AdapterView.OnIte
 
         CharSequence[] items = new CharSequence[inter.getInterest().size()];
         for (int i = 0; i < inter.getInterest().size(); i++){
-            items[i] = inter.getInterest().get(i).getCourse_name();
+            items[i] = inter.getInterest().get(i);
         }
 //        final CharSequence[] items = {" Easy "," Medium "," Hard "," Very Hard "};
         // arraylist to keep the selected items
@@ -235,7 +244,7 @@ public class FirstTime extends AbstractBaseActivity implements AdapterView.OnIte
                         tags.setVisibility(View.VISIBLE);
                         years.setVisibility(View.VISIBLE);
                         next.setVisibility(View.VISIBLE);
-
+                        inte = seletedItems;
                     }
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
@@ -262,8 +271,10 @@ public class FirstTime extends AbstractBaseActivity implements AdapterView.OnIte
         }
 
         if (!years.getText().toString().isEmpty()){
-            yearsRemaining = Integer.parseInt(years.getText().toString());
-            error = false;
+            if (Integer.parseInt(years.getText().toString()) < 9) {
+                yearsRemaining = Integer.parseInt(years.getText().toString());
+                error = false;
+            }
         } else {
             Toast err = Toast.makeText(this, "Please enter the number of remaining years.",
                     Toast.LENGTH_SHORT);
@@ -272,8 +283,37 @@ public class FirstTime extends AbstractBaseActivity implements AdapterView.OnIte
         }
 
         if(!error){
-            startActivity(new Intent(FirstTime.this, ChaptersActivity.class));
-            finish();
+
+            FirstTimeDataParams params = new FirstTimeDataParams();
+            params.setUname(user);
+            params.setDepartment(depar);
+            params.setInterest(inte);
+            params.setTags(interestTags);
+            params.setYears(yearsRemaining);
+
+            RestClient.instance.getApiService().requestSendData(params).enqueue(new
+                Callback<ApiResponse<StatusParam>>() {
+                    @Override
+                    public void onResponse(Call<ApiResponse<StatusParam>> call, retrofit2.Response<ApiResponse<StatusParam>> response) {
+                        if (response.isSuccessful()) {
+//                            ApiResponse<StatusParam> apiResponse = response.body();
+
+                            startActivity(new Intent(FirstTime.this, ChaptersActivity.class));
+                            finish();
+
+                        } else {
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ApiResponse<StatusParam>> call, Throwable t) {
+                        t.printStackTrace();
+                        dismissLoadingDialog();
+                        Toast.makeText(FirstTime.this, getString(R.string.servererror), Toast
+                                .LENGTH_SHORT).show();
+                    }
+                });
         }
 
 
