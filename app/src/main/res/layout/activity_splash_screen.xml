@@ -24,7 +24,16 @@
         app:indicatorColor="#bb7722"
     />
 
-
+   <!--
+    <ImageView
+        android:id="@+id/hofstramainpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hofstra_logo"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+         />
+-->
     <TextView
         android:id="@+id/tvclassName"
         android:layout_width="wrap_content"
