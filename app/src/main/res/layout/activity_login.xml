@@ -5,28 +5,23 @@
     android:layout_height="match_parent"
     tools:context="com.ekpro.coldfire.LoginActivity">
 
-
-
     <LinearLayout
         android:id="@+id/llLogIn"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
-        android:background="@color/lightGreen500">
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Log In"
-            android:textColor="@color/classesTextColor"
-            android:textSize="35dp" />
-
-
+        android:background="@color/white">
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/hofstra_logo"
+        android:scaleType="centerCrop"
+        android:alpha="0.4"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false" />
 
     <RelativeLayout
         android:id="@+id/rlDiveIn"
@@ -38,6 +33,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="50dp">
+
 
         <RelativeLayout
             android:id="@+id/rlMobileNumber"
@@ -51,7 +47,7 @@
 
                 <EditText
                     android:id="@+id/etUsername"
-                    android:layout_width="match_parent"
+                    android:layout_width="309dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
@@ -170,4 +166,15 @@
         </RelativeLayout>
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/rlDiveIn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp" />
 </RelativeLayout>
