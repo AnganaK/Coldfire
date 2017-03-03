@@ -228,7 +228,7 @@ public class ChaptersActivity extends AbstractFragmentActivity {
                     chapterPosition = position;
 
                     replaceFragment(ChaptersFragment.newInstance());
-                    tvActivityTitle.setText("Chapter " + Integer.toString(chapterPosition + 1));
+//                    tvActivityTitle.setText("Chapter " + Integer.toString(chapterPosition + 1));
                     drawerLayout.closeDrawer(Gravity.LEFT);
                 }
             }
@@ -396,30 +396,57 @@ public class ChaptersActivity extends AbstractFragmentActivity {
     @OnClick(R.id.tvCurrentClass)
     public void changeClass() {
         f = this.getSupportFragmentManager().findFragmentById(R.id.flHomeContainer);
-        if (f instanceof ProgressFragment) {
+        if (f instanceof CurrentFragment) {
             // can do something with f
             drawerLayout.closeDrawer(Gravity.LEFT);
         } else {
-            replaceFragment(ProgressFragment.newInstance());
-            tvActivityTitle.setText("YOUR PROGRESS");
+            replaceFragment(CurrentFragment.newInstance());
+            tvActivityTitle.setText("Current Class");
             drawerLayout.closeDrawer(Gravity.LEFT);
         }
     }
 
-    @OnClick(R.id.rlProgress)
-    public void navMyProgress() {
-
-
+    @OnClick(R.id.tvPreviousClasses)
+    public void previousClass() {
         f = this.getSupportFragmentManager().findFragmentById(R.id.flHomeContainer);
-        if (f instanceof ProgressFragment) {
+        if (f instanceof PreviousClassFragment) {
             // can do something with f
             drawerLayout.closeDrawer(Gravity.LEFT);
         } else {
-            replaceFragment(ProgressFragment.newInstance());
-            tvActivityTitle.setText("YOUR PROGRESS");
+            replaceFragment(PreviousClassFragment.newInstance());
+            tvActivityTitle.setText("Previous Class");
             drawerLayout.closeDrawer(Gravity.LEFT);
         }
     }
+
+    @OnClick(R.id.tvFutureClass)
+    public void futureClass() {
+        f = this.getSupportFragmentManager().findFragmentById(R.id.flHomeContainer);
+        if (f instanceof FutureClassFragment) {
+            // can do something with f
+            drawerLayout.closeDrawer(Gravity.LEFT);
+        } else {
+            replaceFragment(FutureClassFragment.newInstance());
+            tvActivityTitle.setText("Future Class");
+            drawerLayout.closeDrawer(Gravity.LEFT);
+        }
+    }
+
+
+//    @OnClick(R.id.rlProgress)
+//    public void navMyProgress() {
+//
+//
+//        f = this.getSupportFragmentManager().findFragmentById(R.id.flHomeContainer);
+//        if (f instanceof ProgressFragment) {
+//            // can do something with f
+//            drawerLayout.closeDrawer(Gravity.LEFT);
+//        } else {
+//            replaceFragment(ProgressFragment.newInstance());
+//            tvActivityTitle.setText("YOUR PROGRESS");
+//            drawerLayout.closeDrawer(Gravity.LEFT);
+//        }
+//    }
 
 
 }

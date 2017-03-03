@@ -20,11 +20,9 @@ import java.util.ArrayList;
 import butterknife.Bind;
 
 /**
- * Fragment used for managing interactions for and presentation of a navigation drawer.
- * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
- * design guidelines</a> for a complete explanation of the behaviors implemented here.
+ * Created by xps-windows on 3/3/2017.
  */
-public class ProgressFragment extends AbstractBaseFragment {
+public class CurrentFragment  extends AbstractBaseFragment {
 
     private ArrayList<String> chapters;
 
@@ -33,12 +31,12 @@ public class ProgressFragment extends AbstractBaseFragment {
 
     @Override
     public View onCreateKnifeView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_progress, container, false);
+        return inflater.inflate(R.layout.current_class_fragment, container, false);
     }
 
     @Override
     public String getTitle() {
-        return "Progress Fragment";
+        return "Current Classes";
     }
 
     public static ProgressFragment newInstance() {
@@ -64,15 +62,15 @@ public class ProgressFragment extends AbstractBaseFragment {
         super.onViewCreated(view, savedInstanceState);
         chapters = new ArrayList<>();
 
-//        chapters.add("chapter 1");
-//        chapters.add("chapter 3");
-//        chapters.add("chapter 5");
+        chapters.add("CSC252 Adv. Operating Systems");
+        chapters.add("CSC270 Artificial Intelligence");
+//        chapters.add("CSC284 Computer Networking, Processing and Communication");
 //        chapters.add("chapter 7");
 //        chapters.add("chapter 8");
 //        chapters.add("chapter 9");
 
-//        initToolbar();
-//
+        initToolbar();
+
 //        ProgressAdapter progressAdpter = new ProgressAdapter(context, chapters);
 //        lvChapterProgress.setAdapter(progressAdpter);
 //        lvChapterProgress.setOnItemClickListener(new AdapterView.OnItemClickListener() {

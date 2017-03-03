@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="com.incredible.computerstudies.MainActivity$PlaceholderFragment">
+    tools:context="com.ekpro.coldfire.chapters.ProgressFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

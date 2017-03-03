@@ -42,6 +42,10 @@
 
     <string name="servererror">Server Unavailable.</string>
 
+    <string name="previous">Previous Classes</string>
+    <string name="current">Current Classes</string>
+    <string name="future">Future Possible Classes</string>
+
     <!--
     <string-array name="department_array">
         <item>Malaysia</item>

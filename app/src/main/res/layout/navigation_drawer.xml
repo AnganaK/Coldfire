@@ -108,6 +108,7 @@
             android:clipToPadding="false"
             android:divider="@color/white"
             android:dividerHeight="0dp"
+            android:visibility="gone"
             tools:listitem="@layout/item_list" />
 
         <LinearLayout
@@ -126,7 +127,59 @@
                 android:id="@+id/tvCurrentClass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Chapter 1"
+                android:text="Current Classes"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_margin="10dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_menu_send" />
+
+            <TextView
+                android:id="@+id/tvFutureClass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Future Class"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_margin="10dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_menu_send" />
+
+            <TextView
+                android:id="@+id/tvPreviousClasses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Previous Class"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:layout_gravity="center"

@@ -56,9 +56,9 @@ public class ProgressAdapter extends BaseAdapter {
             view.setTag(holder);
         }
 
-        holder.tvChapterNumber.setText(chapters.get(position));
-        holder.tvChapterName.setText("Introduction to Programming");
-        holder.pbChapterProgress.setProgress(30);
+//        holder.tvChapterNumber.setText(chapters.get(position));
+        holder.tvChapterName.setText(chapters.get(position));
+        holder.pbChapterProgress.setProgress((int)(Math.random()*60));
 
         return view;
     }

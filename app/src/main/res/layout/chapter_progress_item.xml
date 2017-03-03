@@ -11,11 +11,13 @@
         android:layout_centerVertical="true"
         android:padding="10dp"
         android:text="Chapter No."
+        android:visibility="gone"
         android:textSize="15dp" />
 
     <LinearLayout
         android:id="@+id/llChapterDetails"
         android:layout_width="match_parent"
+        android:padding="10dp"
         android:layout_height="match_parent"
         android:layout_toLeftOf="@+id/ivNext"
         android:layout_toRightOf="@+id/tvChapterNumber"
@@ -26,6 +28,7 @@
             android:id="@+id/tvChapterName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="Introduction to Programming"
             android:textSize="15dp"
             android:paddingTop="15dp"
