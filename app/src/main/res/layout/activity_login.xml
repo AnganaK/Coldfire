@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.incredible.computerstudies.LoginActivity">
+    tools:context="com.ekpro.coldfire.LoginActivity">
 
     <LinearLayout
         android:id="@+id/llLogIn"
@@ -38,22 +38,46 @@
             android:layout_height="wrap_content">
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/ilMobileNumber"
+                android:id="@+id/ilUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/etMobileNumber"
+                    android:id="@+id/etUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
-                    android:hint="Mobile Number"
+                    android:hint="@string/username"
                     android:imeOptions="actionNext"
                     android:inputType="number"
                     android:maxLength="10"
                     android:paddingBottom="20dp"
-                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textColor="@color/classesGreen"
+                    android:textColorHighlight="@color/colorGreenHighlight"
+                    android:textColorHint="@color/colorGrayHint"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ilUsername">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:hint="@string/password"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingBottom="20dp"
+                    android:maxLines="1"
                     android:textColor="@color/classesGreen"
                     android:textColorHighlight="@color/colorGreenHighlight"
                     android:textColorHint="@color/colorGrayHint"
@@ -63,7 +87,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignRight="@+id/ilMobileNumber"
+                android:layout_alignRight="@+id/ilUsername"
                 android:layout_marginTop="10dp"
                 android:background="@color/white"
                 android:scaleType="fitXY"
@@ -84,7 +108,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="By creating an account, you agree to our terms and conditions. "
+                android:text="@string/terms"
                 android:textColor="@android:color/secondary_text_dark" />
 
             <LinearLayout
@@ -101,7 +125,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:autoLink="web"
-                    android:text="@string/tvTermsconditions"
+                    android:text="@string/terms2"
+                    android:gravity="center"
                     android:textColor="@android:color/tab_indicator_text" />
 
             </LinearLayout>
@@ -114,7 +139,7 @@
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/llTermsConditions"
             android:background="@color/transparent"
-            android:gravity="right">
+            android:gravity="end">
 
             <Button
                 android:id="@+id/btnNext"

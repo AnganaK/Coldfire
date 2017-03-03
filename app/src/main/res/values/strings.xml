@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Computer Studies</string>
+    <string name="app_name">Cold Fire Networking</string>
+
+    <string name="Hofstra">Hofstra Pride</string>
 
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -7,6 +9,12 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="terms">By creating an account, you agree to our terms and conditions. </string>
+    <string name="terms2">Contact the developers to get your login details if you forget it
+        .</string>
 
     <string name="action_example">Example action</string>
 
@@ -19,7 +27,6 @@
     <string name="yesterday">yesterday</string>
     <string name="days_ago">days ago</string>
     <string name="title_activity_chapters">ChaptersActivity</string>
-    <string name="tvTermsconditions">Contact +91 9898637980 to get your login details if you forget it.</string>
     <string name="next">Next</string>
 
     <!-- TODO: Remove or change this placeholder text -->
