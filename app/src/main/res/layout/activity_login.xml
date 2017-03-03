@@ -15,28 +15,14 @@
         android:gravity="center"
         android:background="@color/lightGreen500">
 
-<<<<<<< HEAD
-        <ImageView
-=======
-
-
         <TextView
->>>>>>> 1fb6dab3a7dad63cb77232b375d98fc67b7e3910
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/hofstra_logo"
             android:layout_above="@+id/textView2"
             android:layout_centerHorizontal="true"
-<<<<<<< HEAD
             android:id="@+id/imageView2"/>
-=======
-            android:text="Log In"
-            android:textColor="@color/classesTextColor"
-            android:textSize="35dp" />
-
-
-
->>>>>>> 1fb6dab3a7dad63cb77232b375d98fc67b7e3910
     </LinearLayout>
 
     <RelativeLayout
