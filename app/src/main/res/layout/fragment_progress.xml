@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.incredible.computerstudies.MainActivity$PlaceholderFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="20dp">
+
+        <!--<com.pascalwelsch.holocircularprogressbar.HoloCircularProgressBar-->
+            <!--android:id="@+id/pbWarrantyDevices"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:background="@color/transparent"-->
+            <!--android:rotation="0"-->
+            <!--app:marker_visible="false"-->
+            <!--app:progress="0.667"-->
+            <!--app:progress_background_color="@color/colorGrayHint"-->
+            <!--app:progress_color="@color/classesGreen"-->
+            <!--app:stroke_width="10dp"-->
+            <!--app:thumb_visible="false" />-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Completed : 4"
+                android:textColor="@color/classesGreen"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="In Progress : 2"
+                android:textColor="@color/classesGreen"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lvChapterProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:divider="@color/white"
+            android:dividerHeight="0dp"
+            tools:listitem="@layout/chapter_progress_item" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

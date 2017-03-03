@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_progress"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="your progress" />
+    </group>
+
+    <item android:title="Chapters">
+        <menu>
+            <item
+                android:id="@+id/nav_chapter1"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 1" />
+            <item
+                android:id="@+id/nav_chapter2"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 2" />
+            <item
+                android:id="@+id/nav_chapter3"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 3" />
+            <item
+                android:id="@+id/nav_chapter4"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 4" />
+            <item
+                android:id="@+id/nav_chapter5"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 5" />
+            <item
+                android:id="@+id/nav_chapter6"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 6" />
+            <item
+                android:id="@+id/nav_chapter7"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 7" />
+            <item
+                android:id="@+id/nav_chapter8"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 8" />
+            <item
+                android:id="@+id/nav_chapter9"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 9" />
+            <item
+                android:id="@+id/nav_chapter10"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 10" />
+            <item
+                android:id="@+id/nav_chapter11"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 11" />
+            <item
+                android:id="@+id/nav_chapter12"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 12" />
+            <item
+                android:id="@+id/nav_chapter13"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 13" />
+            <item
+                android:id="@+id/nav_chapter14"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Chapter 14" />
+        </menu>
+    </item>
+    <item android:title="Exams">
+        <menu>
+            <item
+                android:id="@+id/nav_exam1"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Exam 1" />
+            <item
+                android:id="@+id/nav_exam2"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Exam 2" />
+        </menu>
+    </item>
+
+</menu>
