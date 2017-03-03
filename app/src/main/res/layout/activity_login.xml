@@ -11,12 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
-
         android:background="@color/white">
 
-
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/hofstra_logo"
@@ -25,7 +22,6 @@
             android:id="@+id/imageView2"/>
 
     </LinearLayout>
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -179,6 +175,7 @@
 
     </RelativeLayout>
 
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -189,4 +186,6 @@
         android:layout_above="@+id/rlDiveIn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="53dp" />
+        -->
+
 </RelativeLayout>
