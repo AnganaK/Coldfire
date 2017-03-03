@@ -1,5 +1,6 @@
 package com.ekpro.coldfire.webservices;
 
+import com.ekpro.coldfire.FirstTimeParams;
 import com.ekpro.coldfire.models.LoginParams;
 import com.ekpro.coldfire.models.StudentDetails;
 
@@ -28,6 +29,9 @@ public interface ApiService {
 
     @POST("TempStudent/login")
     Call<ApiResponse<StudentDetails>> requestTempStudentLogin(@Body LoginParams params);
+
+    @GET("Students/department")
+    Call<ApiResponse<DepartmentParams>> requestDepartment();
 
 }
 
