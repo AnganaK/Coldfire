@@ -16,6 +16,9 @@
     <string name="terms2">Contact the developers to get your login details if you forget it
         .</string>
 
+    <string name="loginerror">Invalid Log In Details</string>
+    <string name="loginerror2">Network Error</string>
+
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>

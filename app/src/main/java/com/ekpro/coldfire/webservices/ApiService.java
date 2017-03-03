@@ -1,11 +1,13 @@
 package com.ekpro.coldfire.webservices;
 
+import com.ekpro.coldfire.models.LoginParams;
 import com.ekpro.coldfire.models.StudentDetails;
 
 import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 /**
@@ -24,8 +26,8 @@ public interface ApiService {
 //    @POST("/TempConsumer/initialize")
 //    void createTempConsumer(@Body TempConsumer tempConsumer, Callback<ServifyResponse<TempConsumer>> tempConsumerCallback);
 
-    @POST("/TempConsumer/initialize")
-    Call<ApiResponse<StudentDetails>> requestTempStrudentLogin(@Body HashMap<String, Object> params);
+    @POST("TempStudent/login")
+    Call<ApiResponse<StudentDetails>> requestTempStudentLogin(@Body LoginParams params);
 
 }
 

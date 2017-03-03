@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -15,8 +16,10 @@ import android.widget.Toast;
 
 import com.ekpro.coldfire.Utils.AbstractBaseActivity;
 import com.ekpro.coldfire.chapters.ChaptersActivity;
+import com.ekpro.coldfire.models.LoginParams;
 import com.ekpro.coldfire.models.StudentDetails;
 import com.ekpro.coldfire.webservices.ApiResponse;
+import com.ekpro.coldfire.webservices.RestClient;
 
 import java.util.HashMap;
 import java.util.logging.Logger;
@@ -57,34 +60,42 @@ public class LoginActivity extends AbstractBaseActivity {
     public void clickedNext() {
 
 
-        final String username = etUsername.getText().toString();
-        final String password = etPassword.getText().toString();
+        LoginParams theseParams = new LoginParams();
 
-        if (username.isEmpty()) {
+        theseParams.setUsername(Integer.parseInt(etUsername.getText().toString()));
+        theseParams.setPassword(etPassword.getText().toString());
 
+        Log.d("username", String.valueOf(theseParams.getUsername()));
+        Log.d("password", theseParams.getPassword());
 
+        if (theseParams.getUsername() <= 100000) {
+
+Log.d("entered here", "value");
         } else {
 
+            Log.d("entered here", "else");
 
-            showLoadingDialog(context, "Requesting OTP", false);
+            showLoadingDialog(context, "Requesting", false);
 
 //            TempConsumer tempConsumer = Hawk.get(AppConstant.TEMP_CONSUMER);
 
 //            TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
 //            String imei = telephonyManager.getDeviceId();
 
-            HashMap<String, Object> param = new HashMap<>();
-            param.put("username", username);
-            param.put("password", password);
 //            param.put("IMEI", imei);
 //            param.put("TempConsumerID", tempConsumer.getTempConsumerID());
+            Log.d("entered here", "value else");
+
+            Log.d("service", service.toString());
 
             //requestOTPForTempConsumer
-            service.requestTempStrudentLogin(param).enqueue(new Callback<ApiResponse<StudentDetails>>() {
+            RestClient.instance.getApiService().requestTempStudentLogin(theseParams).enqueue(new Callback<ApiResponse<StudentDetails>>() {
                 @Override
                 public void onResponse(Call<ApiResponse<StudentDetails>> call, retrofit2.Response<ApiResponse<StudentDetails>> response) {
 
 //                    Logger.d(gson.toJson(response));
+
+                    Log.d("service", "onResponse: ");
 
                     dismissLoadingDialog();
 
@@ -103,14 +114,17 @@ public class LoginActivity extends AbstractBaseActivity {
 //                            Utilities.instance.shortSnack(rlContainer, "Failed to send OTP");
                         }
                     } else {
-                        Toast.makeText(LoginActivity.this, "something went wrong!!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, getString(R.string.loginerror), Toast
+                                .LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ApiResponse<StudentDetails>> call, Throwable t) {
+                    t.printStackTrace();
                     dismissLoadingDialog();
-                    Toast.makeText(LoginActivity.this, "Something went wrong!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, getString(R.string.loginerror2), Toast
+                            .LENGTH_SHORT).show();
                 }
             });
         }

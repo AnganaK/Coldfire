@@ -21,7 +21,7 @@ public class RestClient {
 
     //Staging
 //    public static final String API_BASE_URL = "http://staging.servify.in:5000/api/v1";
-    public static final String API_BASE_URL = "http://192.168.43.3:3003/api/";
+    public static final String API_BASE_URL = "http://10.11.66.37:5000/api/";
 
     //Demo
 //    public static final String API_BASE_URL = "http://staging.servify.in:5002/api/v1";
@@ -54,7 +54,7 @@ public class RestClient {
 //        public void intercept(RequestFacade request) {
 //
 //            request.addHeader("DeviceType", "Android");
-//            request.addHeader("Version", "" + BuildConfig.VERSION_CODE);
+////            request.addHeader("Version", "" + BuildConfig.VERSION_CODE);
 //            request.addHeader("App", "Servify");
 //        }
 //    };
