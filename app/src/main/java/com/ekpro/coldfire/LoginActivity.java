@@ -104,9 +104,16 @@ Log.d("entered here", "value");
 
                         if (apiResponse.isSuccess()) {
 
+                            StudentDetails stu = apiResponse.getData();
 
-                            startActivity(new Intent(LoginActivity.this, ChaptersActivity.class));
-                            finish();
+                            if ( stu.getReturning() ) {
+                                startActivity(new Intent(LoginActivity.this, ChaptersActivity.class));
+                                finish();
+                            } else{
+
+                                startActivity(new Intent(LoginActivity.this, FirstTime.class));
+                                finish();
+                            }
 
 //                            overridePendingTransition(R.anim.animation_leave, R.anim.animation_enter);
                         } else {

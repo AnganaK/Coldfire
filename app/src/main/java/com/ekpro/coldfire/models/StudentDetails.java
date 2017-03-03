@@ -8,13 +8,10 @@ import java.util.ArrayList;
 public class StudentDetails {
 
     int id;
-    String imei;
     String name;
-    long mobile;
-    String standerd;
-    ArrayList<String> subjects;
-    String created_date;
-    String image_url;
+    String username;
+    String password;
+    boolean returning;
 
     public int getId() {
         return id;
@@ -22,14 +19,6 @@ public class StudentDetails {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getImei() {
-        return imei;
-    }
-
-    public void setImei(String imei) {
-        this.imei = imei;
     }
 
     public String getName() {
@@ -40,43 +29,29 @@ public class StudentDetails {
         this.name = name;
     }
 
-    public long getMobile() {
-        return mobile;
+    public String getUsername() {
+        return username;
     }
 
-    public void setMobile(long mobile) {
-        this.mobile = mobile;
+    public void setUsername(String name) {
+        this.username = name;
     }
 
-    public String getStanderd() {
-        return standerd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setStanderd(String standerd) {
-        this.standerd = standerd;
+    public void setPassword(String passw) {
+        this.password = passw;
     }
 
-    public ArrayList<String> getSubjects() {
-        return subjects;
+    public boolean getReturning() {
+        return returning;
     }
 
-    public void setSubjects(ArrayList<String> subjects) {
-        this.subjects = subjects;
+    public void setReturning(boolean ret) {
+        this.returning = ret;
     }
 
-    public String getCreated_date() {
-        return created_date;
-    }
 
-    public void setCreated_date(String created_date) {
-        this.created_date = created_date;
-    }
-
-    public String getImage_url() {
-        return image_url;
-    }
-
-    public void setImage_url(String image_url) {
-        this.image_url = image_url;
-    }
 }

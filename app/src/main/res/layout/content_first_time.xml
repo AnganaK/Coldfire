@@ -3,37 +3,23 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                tools:context="com.ekpro.coldfire.LoginActivity">
+                tools:context="com.ekpro.coldfire.FirstTime">
 
     <LinearLayout
         android:id="@+id/llLogIn"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
-
-        android:background="@color/white">
-
+        android:background="@color/lightGreen500">
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/hofstra_logo"
-            android:layout_above="@+id/textView2"
             android:layout_centerHorizontal="true"
-            android:id="@+id/imageView2"/>
-
+            android:text="@string/first1"
+            android:textColor="@color/classesTextColor"
+            android:textSize="35dp" />
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="@drawable/hofstra_logo"
-        android:scaleType="centerCrop"
-        android:alpha="0.4"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false" />
 
     <RelativeLayout
         android:id="@+id/rlDiveIn"
@@ -46,24 +32,69 @@
         android:paddingRight="20dp"
         android:paddingTop="50dp">
 
-
         <RelativeLayout
-            android:id="@+id/rlMobileNumber"
+            android:id="@+id/llTermsConditions"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"/>
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:onClick="ChooseInterests"
+                android:layout_below="@id/spinner"
+                android:layout_weight="1"/>
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/ilUsername"
+                android:id="@+id/fieldInterest"
+                android:layout_below="@id/button2"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/etUsername"
-                    android:layout_width="309dp"
+                    android:id="@+id/etInterest"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
-                    android:hint="@string/username"
+                    android:hint="@string/interest"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:paddingBottom="20dp"
+                    android:maxLines="1"
+                    android:textColor="@color/classesGreen"
+                    android:textColorHighlight="@color/colorGreenHighlight"
+                    android:textColorHint="@color/colorGrayHint"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/years"
+                android:layout_below="@id/fieldInterest"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etYears"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:hint="@string/years"
                     android:imeOptions="actionNext"
                     android:inputType="number"
                     android:maxLength="10"
@@ -75,78 +106,8 @@
                     android:textSize="17sp" />
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ilPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ilUsername">
 
-                <EditText
-                    android:id="@+id/etPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:hint="@string/password"
-                    android:imeOptions="actionNext"
-                    android:inputType="textPassword"
-                    android:maxLength="10"
-                    android:paddingBottom="20dp"
-                    android:maxLines="1"
-                    android:textColor="@color/classesGreen"
-                    android:textColorHighlight="@color/colorGreenHighlight"
-                    android:textColorHint="@color/colorGrayHint"
-                    android:textSize="17sp" />
-            </android.support.design.widget.TextInputLayout>
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignRight="@+id/ilUsername"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:scaleType="fitXY"
-                 />
         </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/llTermsConditions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rlMobileNumber"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:maxLines="2"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/terms"
-                android:textColor="@android:color/secondary_text_dark" />
-
-            <LinearLayout
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:paddingTop="5dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvTermsConditions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:autoLink="web"
-                    android:text="@string/terms2"
-                    android:gravity="center"
-                    android:textColor="@android:color/tab_indicator_text" />
-
-            </LinearLayout>
-
-        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -172,21 +133,11 @@
                 android:text="@string/next"
                 android:textAllCaps="true"
                 android:textColor="@color/classesTextColor"
+                android:onClick="ActualWork"
                 android:textSize="14sp"
                 tools:visibility="visible"
                 android:visibility="gone" />
         </RelativeLayout>
 
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log In"
-        android:textColor="@color/black"
-        android:textSize="35dp"
-        android:textStyle="normal|bold"
-        android:layout_above="@+id/rlDiveIn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="53dp" />
 </RelativeLayout>
